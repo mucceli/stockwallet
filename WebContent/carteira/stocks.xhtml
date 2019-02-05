@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/carteira/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:composite="http://java.sun.com/jsf/composite">
+
+<ui:define name="content">
+		 <b:row style="height:40px;"/>
+		  <div class="notification">
+			<b:dataTable value="#{stocksMB.stockList}" var="stock" searching="false" info="false">
+			    <b:dataTableColumn value="#{stock.name}" order="asc"/>
+			    <b:dataTableColumn value="#{stock.symbol}" order="asc"/>
+			</b:dataTable>
+			<b:panelGrid columns="6" size="sm" >
+			    <b:commandButton value="New" action="crudStocks.xhtml" update="@none" look="primary" style="width:80px"/>
+			    <b:commandButton value="Back" ajax="true" update="@none" style="width:80px"/>
+			  </b:panelGrid>
+		  </div>
+</ui:define>
+
+</ui:composition>

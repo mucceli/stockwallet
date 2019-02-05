@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/carteira/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:composite="http://java.sun.com/jsf/composite">
+
+	<ui:define name="content">
+		<b:row style="height:40px;"/>
+		<b:messages id="messages" globalOnly="true"/>
+		<b:row style="height:40px;"/>
+		  <div class="notification">
+			<b:dataTable value="#{analisysMB.analisysList}" var="analisys" searching="false" info="false">
+			    <b:dataTableColumn value="#{analisys.stock.name}" order="asc"/>
+			    <b:dataTableColumn label="Analisys Date" dataType="date">
+				     <h:outputText value="#{analisys.dateAnalisys}">
+				          <f:convertDateTime pattern="dd/MM/yyyy" />
+				     </h:outputText>	    				
+				</b:dataTableColumn>
+			    <b:dataTableColumn value="#{analisys.note}" order="asc"/>
+			    <b:dataTableColumn value="#{analisys.status.name}" order="asc" label="Status">
+			    	 <span style="margin-left: 3px;">
+			    	 	<b:label text="UP" severity="success"/>
+			    	 </span>
+			    </b:dataTableColumn>
+			    <b:dataTableColumn label="Alert Date" value="#{analisys.alertDate}" order="asc"/>
+			</b:dataTable>
+			<b:panelGrid columns="6" size="sm" >
+			    <b:commandButton value="New" action="crudAnalisys.xhtml" update="@none" look="primary" style="width:80px"/>
+			    <b:commandButton value="Back" ajax="true" update="@none" style="width:80px"/>			   
+			 </b:panelGrid>
+		  </div>
+</ui:define>
+
+</ui:composition>

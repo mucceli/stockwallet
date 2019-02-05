@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/carteira/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:composite="http://java.sun.com/jsf/composite">
+
+<ui:define name="content">
+		<b:row style="height:40px;"/>
+		<div class="field">
+		  <div class="control"> 
+		  <b:inputText value="#{crudStocksMB.entity.name}" placeholder="Name" label="Name of company:" />
+		  </div>
+		  <div class="control"  style="margin-top:10px;">
+		    <b:inputText value="#{crudStocksMB.entity.symbol}" placeholder="Symbol" label="Symbol of company :" />
+		  </div>
+			  <b:selectOneMenu value="#{crudStocksMB.liquiditySelected}" colMd="2" required="true" label="Select the liquidity of the stock:">
+	            <f:selectItems value="#{crudStocksMB.allLiquiditys}" var="liquidity" itemValue="#{liquidity}" itemLabel="#{liquidity.name}" />
+		    </b:selectOneMenu>
+		</div>
+		<div style="margin-top:10px;">
+		    <b:commandButton value="Salvar" look="primary" action="#{crudStocksMB.saveEntity}" style="width:80px;"/>
+		    <b:commandButton value="Cancelar" style="width:80px;margin-left:20px;"/>
+		</div>
+</ui:define>
+
+</ui:composition>
