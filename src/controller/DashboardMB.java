@@ -13,28 +13,31 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
+import org.json.JSONObject;
+
+import model.IbovJsonObject;
+
 @ManagedBean(name="dashboardMB")
 @ViewScoped
 public class DashboardMB implements Serializable{
 	
 	private static final long serialVersionUID = -4679206604759152170L;
 
-	public String teste;
+	public StringBuilder teste;
+	public IbovJsonObject obj;
 	
-	
-	public String getTeste() {
-		return teste;
+	public IbovJsonObject getObj() {
+		return obj;
 	}
 
-
-	public void setTeste(String teste) {
-		this.teste = teste;
+	public void setObj(IbovJsonObject obj) {
+		this.obj = obj;
 	}
 
 
 	@PostConstruct
 	public void init() {
-		
+		teste = new StringBuilder();
 		//Rest call to get IBOV index.
 		URL url;
 		try {
@@ -55,10 +58,16 @@ public class DashboardMB implements Serializable{
 			System.out.println("Output from Server .... \n");
 			while ((output = br.readLine()) != null) {
 				System.out.println(output);
-				teste = output;
-				//JSONO
+				teste.append(output);
 			}
-	
+			
+			JSONObject g = new JSONObject(teste.toString());
+			obj = new IbovJsonObject();
+			obj.setClose(g.getJSONObject("Time Series (60min)").
+			getJSONObject("2019-01-18 10:00:00").getString("4. close"));
+			
+			//JSON SERVICE????
+			
 			conn.disconnect();
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block

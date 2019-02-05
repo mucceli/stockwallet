@@ -18,8 +18,8 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="ANALISYS")
-@NamedQuery(name="Analisys.findAll", query="SELECT s FROM Analisys s")
-public class Analisys {
+@NamedQuery(name="Analysis.findAll", query="SELECT s FROM Analysis s")
+public class Analysis {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -39,7 +39,7 @@ public class Analisys {
 	
 	@OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ANALISYS_STATUS_ID")
-	private AnalisysStatus status;
+	private AnalysisStatus status;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name = "STOCK_ID")
@@ -77,11 +77,11 @@ public class Analisys {
 		this.alertDate = alertDate;
 	}
 
-	public AnalisysStatus getStatus() {
+	public AnalysisStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(AnalisysStatus status) {
+	public void setStatus(AnalysisStatus status) {
 		this.status = status;
 	}
 

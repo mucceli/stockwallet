@@ -10,8 +10,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="ANALISYS_STATUS")
-@NamedQuery(name="AnalisysStatus.findAll", query="SELECT s FROM AnalisysStatus s")
-public class AnalisysStatus {
+@NamedQuery(name="AnalysisStatus.findAll", query="SELECT s FROM AnalysisStatus s")
+public class AnalysisStatus {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

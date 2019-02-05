@@ -40,7 +40,7 @@ public class Stock implements Serializable {
 	private Liquidity liquidity;
 	
 	@OneToMany(mappedBy="stock")
-	private List<Analisys> analisysList;
+	private List<Analysis> analisysList;
 
 	public Stock() {
 	}
@@ -77,11 +77,11 @@ public class Stock implements Serializable {
 		this.liquidity = liquidity;
 	}
 
-	public List<Analisys> getAnalisysList() {
+	public List<Analysis> getAnalisysList() {
 		return analisysList;
 	}
 
-	public void setAnalisysList(List<Analisys> analisysList) {
+	public void setAnalisysList(List<Analysis> analisysList) {
 		this.analisysList = analisysList;
 	}
 }

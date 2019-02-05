@@ -4,8 +4,8 @@
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>model.Stock</class>
-		<class>model.Analisys</class>
-		<class>model.AnalisysStatus</class>		
+		<class>model.Analysis</class>
+		<class>model.AnalysisStatus</class>		
 		
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>

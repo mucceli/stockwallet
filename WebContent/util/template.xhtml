@@ -3,15 +3,27 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 	
     <h:head>
-        <title>TEMPLATE</title>
+        <title>Wallet Control</title>
     </h:head>
     <h:body>
-    	<h2>TEMPLATE - hello.xhtml</h2>
-    	<h:form>
-    		<ui:insert name="content" />
+    	<h:form id="loginForm">
+ 			<b:container layout="fluid">
+    	    		<b:column medium-screen="1">
+          				Menu
+          				<h:commandLink action="../wallet/dashboard.xhtml"> Dashboard</h:commandLink>
+          				<h:commandLink action="../stocks/stocks.xhtml"> Stocks</h:commandLink>          				
+          				<h:commandLink action="../analysis/analysis.xhtml"> Analisys</h:commandLink>
+          				<h:commandLink action="../login.xhtml"> logout</h:commandLink>
+        			</b:column>
+        			<b:column medium-screen="8">
+        				<ui:insert name="content" />
+        			</b:column>
+        	</b:container>
     	</h:form>
     </h:body>
 </html>

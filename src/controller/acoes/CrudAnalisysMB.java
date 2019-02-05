@@ -11,8 +11,8 @@ import javax.faces.bean.ViewScoped;
 import dao.AnalisysDAO;
 import dao.AnalisysStatusDAO;
 import dao.StocksDAO;
-import model.Analisys;
-import model.AnalisysStatus;
+import model.Analysis;
+import model.AnalysisStatus;
 import model.Stock;
 
 @ManagedBean(name="crudAnalisysMB")
@@ -21,13 +21,13 @@ public class CrudAnalisysMB {
 	
 	public ArrayList<Stock> stockList;
 	public Stock stockSelected;
-	public AnalisysStatus analisysStatusSelected;
-	public List<AnalisysStatus> analisysStatusList;
-	public Analisys entity;
+	public AnalysisStatus analisysStatusSelected;
+	public List<AnalysisStatus> analisysStatusList;
+	public Analysis entity;
 	
 	@PostConstruct
 	public void init() {
-		entity = new Analisys();
+		entity = new Analysis();
 		stockList = new StocksDAO().findAll();
 		analisysStatusList = new AnalisysStatusDAO().findAll();
 	}
@@ -57,27 +57,27 @@ public class CrudAnalisysMB {
 		this.stockSelected = stockSelected;
 	}
 
-	public Analisys getEntity() {
+	public Analysis getEntity() {
 		return entity;
 	}
 
-	public void setEntity(Analisys entity) {
+	public void setEntity(Analysis entity) {
 		this.entity = entity;
 	}
 
-	public AnalisysStatus getAnalisysStatusSelected() {
+	public AnalysisStatus getAnalisysStatusSelected() {
 		return analisysStatusSelected;
 	}
 
-	public void setAnalisysStatusSelected(AnalisysStatus analisysStatusSelected) {
+	public void setAnalisysStatusSelected(AnalysisStatus analisysStatusSelected) {
 		this.analisysStatusSelected = analisysStatusSelected;
 	}
 
-	public List<AnalisysStatus> getAnalisysStatusList() {
+	public List<AnalysisStatus> getAnalisysStatusList() {
 		return analisysStatusList;
 	}
 
-	public void setAnalisysStatusList(List<AnalisysStatus> analisysStatusList) {
+	public void setAnalisysStatusList(List<AnalysisStatus> analisysStatusList) {
 		this.analisysStatusList = analisysStatusList;
 	}
 }

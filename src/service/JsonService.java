@@ -4,7 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-import model.Analisys;
+import model.Analysis;
 
 @Path("/json/analisys")
 public class JsonService {
@@ -13,9 +13,9 @@ public class JsonService {
 	@GET
 	@Path("/get")
 	@Produces("application/json")
-	public Analisys getAnalisysInJSON() {
-		Analisys analisys = new Analisys();
-		analisys.setAnalisysId(1);
-		return analisys; 
+	public Analysis getAnalisysInJSON() {
+		Analysis analysis = new Analysis();
+		analysis.setAnalisysId(1);
+		return analysis; 
 	}
 }

@@ -2,16 +2,16 @@ package dao;
 
 import java.util.List;
 
-import model.Analisys;
+import model.Analysis;
 import util.AbstractDao;
 
 public class AnalisysDAO extends AbstractDao {
 
-	public List<Analisys>  findAll() {
-		return getEntityManagerInstance().createNamedQuery("Analisys.findAll",Analisys.class).getResultList();
+	public List<Analysis>  findAll() {
+		return getEntityManagerInstance().createNamedQuery("Analysis.findAll",Analysis.class).getResultList();
 	}
 	
-	public void save(Analisys entity) {
+	public void save(Analysis entity) {
 		getEntityManagerInstance().getTransaction().begin();
 		getEntityManagerInstance().persist(entity);
 		getEntityManagerInstance().getTransaction().commit();
