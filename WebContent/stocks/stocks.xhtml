@@ -15,9 +15,9 @@
 			    <b:dataTableColumn value="#{stock.name}" order="asc"/>
 			    <b:dataTableColumn value="#{stock.symbol}" order="asc"/>
 			</b:dataTable>
-			<b:panelGrid columns="6" size="sm" >
-			    <b:commandButton value="New" action="crudStocks.xhtml" update="@none" look="primary" style="width:80px"/>
-			    <b:commandButton value="Back" ajax="true" update="@none" style="width:80px"/>
+			<b:panelGrid columns="12" size="sm" >
+			    <b:commandButton value="New" action="crudStocks.xhtml" update="@none" look="primary" style="width:80px;margin-right=10px;"/>
+			    <b:commandButton value="Cancel" action="../wallet/dashboard.xhtml" style="width:80px;margin-left=20px;important!"/>
 			  </b:panelGrid>
 		  </div>
 </ui:define>

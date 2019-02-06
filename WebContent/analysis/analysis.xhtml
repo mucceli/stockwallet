@@ -15,7 +15,7 @@
 		  <div class="notification">
 			<b:dataTable value="#{analysisMB.analysisList}" var="analysis" searching="false" info="false">
 			    <b:dataTableColumn value="#{analysis.stock.name}" order="asc"/>
-			    <b:dataTableColumn label="analysis Date" dataType="date">
+			    <b:dataTableColumn label="Analysis Date" dataType="date">
 				     <h:outputText value="#{analysis.dateAnalisys}">
 				          <f:convertDateTime pattern="dd/MM/yyyy" />
 				     </h:outputText>	    				
@@ -30,9 +30,10 @@
 			</b:dataTable>
 			<b:panelGrid columns="6" size="sm" >
 			    <b:commandButton value="New" action="crudAnalysis.xhtml" update="@none" look="primary" style="width:80px"/>
-			    <b:commandButton value="Back" ajax="true" update="@none" style="width:80px"/>			   
+			    <b:commandButton value="Cancel" action="../wallet/dashboard.xhtml" style="width:80px;"/>			   
 			 </b:panelGrid>
 		  </div>
+		  <b:row style="height:40px;"/>
 </ui:define>
 
 </ui:composition>

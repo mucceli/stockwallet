@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+    <h:head>
+        <title>Sign Up</title>
+        <h:outputStylesheet name="css/main.css" position="last"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+    	<h:form id="signInForm" style="width:400px;margin-left:200px;">
+    		<b:row style="height:40px;"/>
+		<b:messages id="messages" globalOnly="true"/>
+		<b:row>
+    		<b:column >
+    			<b:inputText value="#{signInMB.email}" placeholder="Write a valid e-mail here" label="E-mail" />
+    		</b:column>
+    	</b:row>
+		<b:row>
+    		<b:column >
+			 <b:inputSecret id="passwordDiv" fieldId="j_password" name="j_password"
+                 value="#{signInMB.password}" placeholder="Write your password"
+                 label="Password"  />
+		    </b:column>
+		 </b:row>
+		 <b:row>
+    		<b:column>
+			 <h:commandLink value="Forgot your password?" action="passwordRecover.xhtml"/>
+		    </b:column>
+		 </b:row>
+		<div style="margin-top:10px;">
+		    <b:commandButton value="Sign In" look="primary" action="#{signInMB.saveEntity}" style="width:100%;" update="messages"/>
+		</div>
+    	</h:form>
+    </h:body>
+</html>

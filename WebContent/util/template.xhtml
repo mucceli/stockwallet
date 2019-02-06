@@ -9,10 +9,11 @@
 	
     <h:head>
         <title>Wallet Control</title>
+        <h:outputStylesheet name="css/main.css" position="last"></h:outputStylesheet>
     </h:head>
     <h:body>
-    	<h:form id="loginForm">
- 			<b:container layout="fluid">
+    	<h:form id="mainForm">
+ 			<b:container layout="fluid" styleClass="mainContainer">
     	    		<b:column medium-screen="1">
           				Menu
           				<h:commandLink action="../wallet/dashboard.xhtml"> Dashboard</h:commandLink>
@@ -20,7 +21,7 @@
           				<h:commandLink action="../analysis/analysis.xhtml"> Analisys</h:commandLink>
           				<h:commandLink action="../login.xhtml"> logout</h:commandLink>
         			</b:column>
-        			<b:column medium-screen="8">
+        			<b:column medium-screen="9">
         				<ui:insert name="content" />
         			</b:column>
         	</b:container>
