@@ -1,4 +1,4 @@
 @charset "UTF-8";
 
-body {background : #333}
+body {background : url("../images/bg.png") top center no-repeat}
 .mainContainer{background: #FFF}
