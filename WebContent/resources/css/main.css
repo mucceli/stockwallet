@@ -1,4 +1,10 @@
 @charset "UTF-8";
 
-body {background : url("../images/bg.png") top center no-repeat}
-.mainContainer{background: #FFF}
+body {background : url("#{resource['images/bg.png']}") top center no-repeat; background-size: 100vw auto}
+.mainContainer{background: #FFF; border-radius: 16px; margin:35px auto; padding: 20px 0;}
+.logo{background : url("#{resource['images/logo.png']}") no-repeat; background-size: 100% auto; display: block; width: 167px;height: 127px;}
+.linkMenu{display: block;line-height: 32px;color: #7E57C2}
+.linkMenu:hover{color: #4D2C91}
+
+.btn-primary{background-color: #4D2C91;border-color: #4D2C99}
+.btn-primary:hover{background-color: #7E57C2;border-color: #7E57C9}
