@@ -12,28 +12,26 @@
 		<b:row style="height:40px;"/>
 		<b:messages id="messages" globalOnly="true"/>
 		<b:row>
-    		<b:column>
 			  <b:selectOneMenu value="#{crudAnalisysMB.stockSelected}" medium-screen="6" required="true" label="Select the stock:">
 	            <f:selectItems value="#{crudAnalisysMB.stockList}" var="stock" itemValue="#{stock}" itemLabel="#{stock.name}" />
 		    </b:selectOneMenu>
-		    </b:column>
 		 </b:row>
 		 <b:row>
-    		<b:column >
 			  <b:selectOneMenu value="#{crudAnalisysMB.analisysStatusSelected}" medium-screen="6" required="true" label="Select the stock:">
 	            <f:selectItems value="#{crudAnalisysMB.analisysStatusList}" var="status" itemValue="#{status}" itemLabel="#{status.name}" />
 		    </b:selectOneMenu>
-		    </b:column>
 		 </b:row>
 		 <b:row>
-    		<b:column >
-    			<b:inputTextarea value="#{crudAnalisysMB.entity.note}" medium-screen="6" placeholder="Write your notes about the stock" label="Note :" />
-    		</b:column>
+    		<b:inputTextarea value="#{crudAnalisysMB.entity.note}" medium-screen="6" placeholder="Write your notes about the stock" label="Note :" />
     	</b:row>
-		<b:datepicker value="#{crudAnalisysMB.entity.alertDate}" medium-screen="6" label="Alert date :"></b:datepicker>
+    	<b:row>
+			<b:dateTimePicker value="#{crudAnalisysMB.entity.alertDate}" medium-screen="6" label="Alert date :" format="DD/MM/YYYY"/>
+		</b:row>
 		<b:row>
+			<b:column medium-screen="6">
 		    <b:commandButton value="Save" look="primary" action="#{crudAnalisysMB.saveEntity}" style="width:80px;" update="messages"/>
 		    <b:commandButton value="Cancel" style="width:80px;margin-left:20px;"/>
+		    </b:column>
 		</b:row>
 </ui:define>
 
