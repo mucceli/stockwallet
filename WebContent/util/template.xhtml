@@ -5,20 +5,27 @@
       xmlns:h="http://java.sun.com/jsf/html"
        xmlns:b="http://bootsfaces.net/ui"
       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 	
     <h:head>
         <title>Wallet Control</title>
     </h:head>
     <h:body>
-    <h:outputStylesheet name="css/main.css" position="last"></h:outputStylesheet>
+    	<h:outputStylesheet name="css/main.css" position="last"></h:outputStylesheet>
+    
+		<p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+		<p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+		    <p:graphicImage name="images/loading.gif" />
+		</p:dialog>
+    	
     	<h:form id="mainForm">
  			<b:container layout="fluid" styleClass="mainContainer">
     	    		<b:column medium-screen="2">
           				<span class="logo"></span>
-          				<h:commandLink action="/wallet/dashboard.xhtml" styleClass="linkMenu"> Dashboard</h:commandLink>
-          				<h:commandLink action="/stocks/stocks.xhtml" styleClass="linkMenu"> Stocks</h:commandLink>          				
-          				<h:commandLink action="/analysis/analysis.xhtml" styleClass="linkMenu"> Analysis</h:commandLink>
+          				<h:commandLink action="/wallet/dashboard.xhtml" immediate="true" styleClass="linkMenu"> Dashboard</h:commandLink>
+          				<h:commandLink action="/stocks/stocks.xhtml" immediate="true" styleClass="linkMenu"> Stocks</h:commandLink>          				
+          				<h:commandLink action="/analysis/analysis.xhtml" immediate="true" styleClass="linkMenu"> Analysis</h:commandLink>
           				<h:commandLink action="/users/sign-in.xhtml" styleClass="linkMenu"> sign in</h:commandLink>
           				<h:commandLink action="/users/sign-up.xhtml" styleClass="linkMenu"> sign up</h:commandLink>
         			</b:column>
