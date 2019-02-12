@@ -9,13 +9,13 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ANALISYS_STATUS")
+@Table(name="ANALYSIS_STATUS")
 @NamedQuery(name="AnalysisStatus.findAll", query="SELECT s FROM AnalysisStatus s")
 public class AnalysisStatus {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="ANALISYS_STATUS_ID")
+	@Column(name="ANALYSIS_STATUS_ID")
 	private int analisysStatusId;
 	
 	@Column(name="NAME")

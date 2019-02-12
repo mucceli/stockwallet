@@ -9,7 +9,7 @@ public abstract class AbstractDao {
 	
 	protected EntityManager getEntityManagerInstance() {
 		if(em == null) {
-			em = Persistence.createEntityManagerFactory("carteira_acoes").createEntityManager();
+			em = Persistence.createEntityManagerFactory("stockwallet").createEntityManager();
 		}
 		return em;
 	}

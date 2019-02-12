@@ -17,16 +17,16 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="ANALISYS")
+@Table(name="ANALYSIS")
 @NamedQuery(name="Analysis.findAll", query="SELECT s FROM Analysis s")
 public class Analysis {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="ANALISYS_ID")
+	@Column(name="ANALYSIS_ID")
 	private int analisysId;
 	
-	@Column(name = "ANALISYS_DATE")
+	@Column(name = "ANALYSIS_DATE")
 	@Temporal(TemporalType.DATE)
 	private Date dateAnalisys; 
 	
@@ -38,7 +38,7 @@ public class Analysis {
 	private Date alertDate;
 	
 	@OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "ANALISYS_STATUS_ID")
+    @JoinColumn(name = "ANALYSIS_STATUS_ID")
 	private AnalysisStatus status;
 	
 	@ManyToOne(fetch=FetchType.EAGER)

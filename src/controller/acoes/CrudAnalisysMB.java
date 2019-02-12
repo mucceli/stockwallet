@@ -28,6 +28,7 @@ public class CrudAnalisysMB {
 	@PostConstruct
 	public void init() {
 		entity = new Analysis();
+		//TODO Include BLANK OPTIONS
 		stockList = new StocksDAO().findAll();
 		analisysStatusList = new AnalisysStatusDAO().findAll();
 	}
