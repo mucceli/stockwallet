@@ -14,32 +14,31 @@ import javax.persistence.Table;
 
 import enums.Liquidity;
 
-
 /**
  * The persistent class for the STOCK database table.
  * 
  */
 @Entity
-@Table(name="STOCK")
-@NamedQuery(name="Stock.findAll", query="SELECT s FROM Stock s")
+@Table(name = "STOCK", schema = "stockwallet")
+@NamedQuery(name = "Stock.findAll", query = "SELECT s FROM Stock s")
 public class Stock implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="STOCK_ID")
+	@Column(name = "STOCK_ID")
 	private int stockId;
 
-	@Column(name="SYMBOL")
+	@Column(name = "SYMBOL")
 	private String symbol;
 
-	@Column(name="NAME")
+	@Column(name = "NAME")
 	private String name;
-	
+
 	@Column(name = "LIQUIDITY_ID")
 	private Liquidity liquidity;
-	
-	@OneToMany(mappedBy="stock")
+
+	@OneToMany(mappedBy = "stock")
 	private List<Analysis> analisysList;
 
 	public Stock() {
