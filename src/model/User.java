@@ -2,9 +2,8 @@ package model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -15,17 +14,19 @@ public class User implements Serializable {
 	private static final long serialVersionUID = -7351729135012380019L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer userId;
+	@Column(name = "EMAIL")
 	private String email;
+	
+	@Column(name = "PASSWORD")
 	private String password;
 	
-	public Integer getUserId() {
-		return userId;
+	public User() {}
+	
+	public User(String email, String password) {
+		this.email = email;
+		this.password = password;
 	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
+	
 	public String getEmail() {
 		return email;
 	}
