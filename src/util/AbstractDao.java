@@ -13,4 +13,10 @@ public abstract class AbstractDao {
 		}
 		return em;
 	}
+	
+	protected <T> void persist(T entity) {
+		getEntityManagerInstance().getTransaction().begin();
+		getEntityManagerInstance().persist(entity);
+		getEntityManagerInstance().getTransaction().commit();
+	}
 }

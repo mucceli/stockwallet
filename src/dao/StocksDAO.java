@@ -8,9 +8,7 @@ import util.AbstractDao;
 public class StocksDAO extends AbstractDao{
 	
 	public void save(Stock entity) {
-		getEntityManagerInstance().getTransaction().begin();
-		getEntityManagerInstance().persist(entity);
-		getEntityManagerInstance().getTransaction().commit();
+		persist(entity);
 	}
 	
 	public ArrayList<Stock> findAll() {
