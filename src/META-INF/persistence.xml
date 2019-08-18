@@ -3,10 +3,10 @@
 	<persistence-unit name="stockwallet" transaction-type="RESOURCE_LOCAL">
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>model.Stock</class>
-		<class>model.Analysis</class>
-		<class>model.AnalysisStatus</class>
-		<class>model.User</class>			
+		<class>main.java.model.Stock</class>
+		<class>main.java.model.Analysis</class>
+		<class>main.java.model.AnalysisStatus</class>
+		<class>main.java.model.User</class>			
 		
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>

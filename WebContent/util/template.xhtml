@@ -24,10 +24,11 @@
     	    		<b:column medium-screen="2">
           				<span class="logo"></span>
           				<h:commandLink action="/wallet/dashboard.xhtml" immediate="true" styleClass="linkMenu"> Dashboard</h:commandLink>
-          				<h:commandLink action="/stocks/stocks.xhtml" immediate="true" styleClass="linkMenu"> Stocks</h:commandLink>          				
+          				<h:commandLink action="/stocks/stocks.xhtml" immediate="true" styleClass="linkMenu"> Stocks</h:commandLink>
+          				<h:commandLink action="/transactions/transactions.xhtml" immediate="true" styleClass="linkMenu"> Transactions</h:commandLink>    				
           				<h:commandLink action="/analysis/analysis.xhtml" immediate="true" styleClass="linkMenu"> Analysis</h:commandLink>
-          				<h:commandLink action="/users/sign-in.xhtml" styleClass="linkMenu"> sign in</h:commandLink>
-          				<h:commandLink action="/users/sign-up.xhtml" styleClass="linkMenu"> sign up</h:commandLink>
+          				<h:commandLink action="/users/sign-in.xhtml" styleClass="linkMenu"> Sign in</h:commandLink>
+          				<h:commandLink action="/users/sign-up.xhtml" styleClass="linkMenu"> Sign up</h:commandLink>
         			</b:column>
         			<b:column medium-screen="10">
         				<ui:insert name="content" />
