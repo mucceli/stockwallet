@@ -2,7 +2,7 @@ package enums;
 
 public enum Liquidity {
 
-	LOW(1,"Low"),MEDIUM(2,"Medium"),VERY(3,"Very");
+	LOW(1,"Low"),MEDIUM(2,"Medium"),HIGH(3,"High");
 	
 	private Integer id;
 	private String name;
