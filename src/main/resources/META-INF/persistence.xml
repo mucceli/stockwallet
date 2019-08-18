@@ -9,11 +9,13 @@
 		<class>model.User</class>			
 		
 		<properties>
+			<property name="hibernate.default_schema" value="stockwallet"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://stockwallet.cffsv1n5yvop.us-east-1.rds.amazonaws.com:3306/stockwallet"/>
-			<property name="javax.persistence.jdbc.user" value="admin"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/stockwallet"/>
+			<!--  <property name="javax.persistence.jdbc.url" value="jdbc:mysql://stockwallet.cffsv1n5yvop.us-east-1.rds.amazonaws.com:3306/stockwallet"/> --> 
+			 <property name="javax.persistence.jdbc.user" value="root"/> 
 			<property name="javax.persistence.jdbc.password" value="12345678"/>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/> 
 		</properties>
 		
 	</persistence-unit>
