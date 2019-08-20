@@ -9,19 +9,25 @@
                 xmlns:composite="http://java.sun.com/jsf/composite">
 
 <ui:define name="content">
-	<b:messages id="messages" showDetail="true" closable="true">
-	</b:messages>
-	<b:column col-md="6">
+	<b:column col-md="8">
 		<b:row>
-		 	 <b:inputText value="#{crudStocksMB.entity.name}" required="true" placeholder="Name" label="Name of company:" />
+			<b:panelGrid colSpans="8,4">
+				<b:inputText value="#{crudStocksMB.entity.name}" required="true" placeholder="Name" label="Name of company:" requiredMessage="Name is required" id="nameStock"/>
+			 	<b:message for="nameStock"></b:message>
+			</b:panelGrid>		 	 
 		</b:row>
 		  <b:row>
-		    <b:inputText value="#{crudStocksMB.entity.symbol}" required="true" placeholder="Symbol" label="Symbol of company :" />
+		  	<b:panelGrid colSpans="8,4">
+			    <b:inputText value="#{crudStocksMB.entity.symbol}" required="true" placeholder="Symbol" label="Symbol of company :" requiredMessage="Symbol is required" id="symbolStock"/>
+			    <b:message for="symbolStock" ></b:message>
+		  	</b:panelGrid>
 		</b:row>
 		<b:row>
-			<b:selectOneMenu value="#{crudStocksMB.liquiditySelected}" required="true" label="Select the liquidity of the stock:">
-	            <f:selectItems value="#{crudStocksMB.allLiquiditys}" var="liquidity" itemValue="#{liquidity}" itemLabel="#{liquidity.name}" />
-		    </b:selectOneMenu>
+			<b:panelGrid colSpans="8,4">
+				<b:selectOneMenu value="#{crudStocksMB.liquiditySelected}" required="true" label="Select the liquidity of the stock:">
+		            <f:selectItems value="#{crudStocksMB.allLiquiditys}" var="liquidity" itemValue="#{liquidity}" itemLabel="#{liquidity.name}" />
+			    </b:selectOneMenu>
+		    </b:panelGrid>
 		</b:row>
 		<b:row>
 		    <b:commandButton value="Save Stock" look="primary" action="#{crudStocksMB.saveEntity}"/>

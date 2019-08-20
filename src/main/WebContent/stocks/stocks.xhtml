@@ -9,11 +9,17 @@
                 xmlns:composite="http://java.sun.com/jsf/composite">
 
 <ui:define name="content">
+		<f:event listener="#{stocksMB.init}" type="preRenderView"></f:event>
+		<b:messages id="message" showDetail="true" closable="true"/>
 		 <b:row style="height:40px;"/>
 		  <div class="notification">
 			<b:dataTable value="#{stocksMB.stockList}" var="stock" searching="false" info="false">
-			    <b:dataTableColumn value="#{stock.name}" order="asc"/>
+			    <b:dataTableColumn value="#{stock.name}" order="asc" />
 			    <b:dataTableColumn value="#{stock.symbol}" order="asc"/>
+			    <b:dataTableColumn value="#{stock.liquidity}" order="asc"/>
+			    <b:dataTableColumn label="" >
+			    	<b:button look="primary" icon="glyphicon-pencil" value="" style="display: block;margin-left: auto;margin-right: auto;"/>
+			    </b:dataTableColumn>
 			</b:dataTable>
 			<b:panelGrid columns="12" size="sm" >
 			    <b:commandButton value="New Stock" action="crudStocks.xhtml" update="@none" look="primary" />
