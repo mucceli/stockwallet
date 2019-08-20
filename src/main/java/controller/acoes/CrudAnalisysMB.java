@@ -31,7 +31,6 @@ public class CrudAnalisysMB {
 		//TODO Include BLANK OPTIONS
 		stockList = new StocksDAO().findAll();
 		analisysStatusList = new AnalisysStatusDAO().findAll();
-		analisysStatusList.get(0);
 	}
 	
 	public String saveEntity() {

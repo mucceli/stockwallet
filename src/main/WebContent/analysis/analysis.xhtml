@@ -23,10 +23,16 @@
 			    <b:dataTableColumn value="#{analysis.note}" order="asc"/>
 			    <b:dataTableColumn value="#{analysis.status.name}" order="asc" label="Status">
 			    	 <span style="margin-left: 3px;">
-			    	 	<b:label text="UP" severity="success"/>
+			    	 	<b:label text="UP" severity="success" rendered="false"/>
+			    	 	<b:label text="DOWN" severity="danger" rendered="true"/>
+			    	 	<b:label text="BY-SIDE" rendered="true"/>
 			    	 </span>
 			    </b:dataTableColumn>
-			    <b:dataTableColumn label="Alert Date" value="#{analysis.alertDate}" order="asc"/>
+			    <b:dataTableColumn label="Alert Date" data-type="date">
+			    	 <h:outputText value="#{analysis.alertDate}">
+			    		<f:convertDateTime pattern="dd/MM/yyyy" />
+			    	 </h:outputText>
+			    </b:dataTableColumn>
 			</b:dataTable>
 			<b:panelGrid columns="6" size="sm" >
 			    <b:commandButton value="New Analysis" action="crudAnalysis.xhtml" update="@none" look="primary"/>
