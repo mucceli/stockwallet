@@ -1,4 +1,4 @@
-package main.java.controller;
+package controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import javax.faces.bean.ViewScoped;
 
 import org.json.JSONObject;
 
-import main.java.model.IbovJsonObject;
+import model.IbovJsonObject;
 
 @ManagedBean(name="dashboardMB")
 @ViewScoped

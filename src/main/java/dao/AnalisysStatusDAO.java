@@ -1,10 +1,10 @@
-package main.java.dao;
+package dao;
 
 import java.io.Serializable;
 import java.util.List;
 
-import main.java.model.AnalysisStatus;
-import main.java.util.AbstractDao;
+import model.AnalysisStatus;
+import util.AbstractDao;
 
 public class AnalisysStatusDAO extends AbstractDao implements Serializable {
 

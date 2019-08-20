@@ -1,7 +1,7 @@
-package main.java.dao;
+package dao;
 
-import main.java.model.User;
-import main.java.util.AbstractDao;
+import model.User;
+import util.AbstractDao;
 
 public class UserDAO extends AbstractDao{
 

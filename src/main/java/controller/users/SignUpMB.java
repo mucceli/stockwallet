@@ -1,12 +1,12 @@
-package main.java.controller.users;
+package controller.users;
 
 import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import main.java.model.User;
-import main.java.service.UserService;
+import model.User;
+import service.UserService;
 
 @ManagedBean(name="signUpMB")
 @ViewScoped

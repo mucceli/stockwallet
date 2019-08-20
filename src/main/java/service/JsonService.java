@@ -1,10 +1,10 @@
-package main.java.service;
+package service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-import main.java.model.Analysis;
+import model.Analysis;
 
 @Path("/json/analisys")
 public class JsonService {

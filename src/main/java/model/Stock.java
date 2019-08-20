@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -12,7 +12,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import main.java.enums.Liquidity;
+import enums.Liquidity;
 
 /**
  * The persistent class for the STOCK database table.

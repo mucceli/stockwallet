@@ -17,14 +17,12 @@
 			<version>2.1.7</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/net.bootsfaces/bootsfaces -->
 		<dependency>
 		    <groupId>net.bootsfaces</groupId>
 		    <artifactId>bootsfaces</artifactId>
 		    <version>1.1.1</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
 		<dependency>
 		    <groupId>org.primefaces</groupId>
 		    <artifactId>primefaces</artifactId>
@@ -32,21 +30,18 @@
 		</dependency>
 				
 		
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>8.0.11</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
 		<dependency>
 		    <groupId>javax.persistence</groupId>
 		    <artifactId>javax.persistence-api</artifactId>
 		    <version>2.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
 		<dependency>
 		    <groupId>javax.inject</groupId>
 		    <artifactId>javax.inject</artifactId>
@@ -59,7 +54,6 @@
 			<version>2.5</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
@@ -68,35 +62,30 @@
 		</dependency>
 		
 		
-		<!-- https://mvnrepository.com/artifact/org.webjars.npm/bulma -->
 		<dependency>
 		    <groupId>org.webjars.npm</groupId>
 		    <artifactId>bulma</artifactId>
 		    <version>0.6.0</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-entitymanager</artifactId>
 		    <version>5.3.7.Final</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-core</artifactId>
 		    <version>5.3.7.Final</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
 		<dependency>
 		    <groupId>javax.ws.rs</groupId>
 		    <artifactId>javax.ws.rs-api</artifactId>
 		    <version>2.1</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
 		    <groupId>org.json</groupId>
 		    <artifactId>json</artifactId>
@@ -119,13 +108,13 @@
 	</repositories>
   
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.1</version>
         <configuration>
-          <warSourceDirectory>WebContent</warSourceDirectory>
+          <warSourceDirectory>src/main/WebContent</warSourceDirectory>
           <outputDirectory>../../Documents/desenvolvimento/as/apache-tomcat-8.5.43/webapps</outputDirectory>
         </configuration>
       </plugin>

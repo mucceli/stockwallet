@@ -1,9 +1,9 @@
-package main.java.service;
+package service;
 
 import java.io.Serializable;
 
-import main.java.dao.UserDAO;
-import main.java.model.User;
+import dao.UserDAO;
+import model.User;
 
 public class UserService implements Serializable {
 

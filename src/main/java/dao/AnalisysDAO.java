@@ -1,9 +1,9 @@
-package main.java.dao;
+package dao;
 
 import java.util.List;
 
-import main.java.model.Analysis;
-import main.java.util.AbstractDao;
+import model.Analysis;
+import util.AbstractDao;
 
 public class AnalisysDAO extends AbstractDao {
 

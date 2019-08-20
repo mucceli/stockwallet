@@ -1,4 +1,4 @@
-package main.java.controller.acoes;
+package controller.acoes;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,12 +8,12 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import main.java.dao.AnalisysDAO;
-import main.java.dao.AnalisysStatusDAO;
-import main.java.dao.StocksDAO;
-import main.java.model.Analysis;
-import main.java.model.AnalysisStatus;
-import main.java.model.Stock;
+import dao.AnalisysDAO;
+import dao.AnalisysStatusDAO;
+import dao.StocksDAO;
+import model.Analysis;
+import model.AnalysisStatus;
+import model.Stock;
 
 @ManagedBean(name="crudAnalisysMB")
 @ViewScoped
@@ -31,6 +31,7 @@ public class CrudAnalisysMB {
 		//TODO Include BLANK OPTIONS
 		stockList = new StocksDAO().findAll();
 		analisysStatusList = new AnalisysStatusDAO().findAll();
+		analisysStatusList.get(0);
 	}
 	
 	public String saveEntity() {

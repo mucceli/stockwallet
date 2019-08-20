@@ -1,4 +1,4 @@
-package main.java.controller.users;
+package controller.users;
 
 import java.io.Serializable;
 

@@ -1,8 +1,6 @@
-package test.java;
-
 import org.junit.jupiter.api.Test;
 
-import main.java.controller.users.SignUpMB;
+import controller.users.SignUpMB;
 
 public class SignUpTest {
 

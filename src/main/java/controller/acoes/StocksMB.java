@@ -1,4 +1,4 @@
-package main.java.controller.acoes;
+package controller.acoes;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,8 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import main.java.dao.StocksDAO;
-import main.java.model.Stock;
+import dao.StocksDAO;
+import model.Stock;
 
 @ManagedBean(name="stocksMB")
 @ViewScoped

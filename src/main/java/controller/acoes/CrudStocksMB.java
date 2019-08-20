@@ -1,4 +1,4 @@
-package main.java.controller.acoes;
+package controller.acoes;
 
 import java.io.Serializable;
 
@@ -8,9 +8,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
-import main.java.dao.StocksDAO;
-import main.java.enums.Liquidity;
-import main.java.model.Stock;
+import dao.StocksDAO;
+import enums.Liquidity;
+import model.Stock;
 
 @ManagedBean(name="crudStocksMB")
 @ViewScoped

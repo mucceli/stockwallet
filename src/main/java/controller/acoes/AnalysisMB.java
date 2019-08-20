@@ -1,4 +1,4 @@
-package main.java.controller.acoes;
+package controller.acoes;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import main.java.dao.AnalisysDAO;
-import main.java.model.Analysis;
+import dao.AnalisysDAO;
+import model.Analysis;
 
 @ManagedBean(name="analysisMB")
 @ViewScoped

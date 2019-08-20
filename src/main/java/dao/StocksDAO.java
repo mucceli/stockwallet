@@ -1,9 +1,9 @@
-package main.java.dao;
+package dao;
 
 import java.util.ArrayList;
 
-import main.java.model.Stock;
-import main.java.util.AbstractDao;
+import model.Stock;
+import util.AbstractDao;
 
 public class StocksDAO extends AbstractDao{
 	
