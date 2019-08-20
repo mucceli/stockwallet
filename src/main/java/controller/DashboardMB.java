@@ -64,7 +64,7 @@ public class DashboardMB implements Serializable{
 			JSONObject g = new JSONObject(teste.toString());
 			obj = new IbovJsonObject();
 			obj.setClose(g.getJSONObject("Time Series (60min)").
-			getJSONObject("2019-01-18 10:00:00").getString("4. close"));
+			getJSONObject("2019-08-19 10:00:00").getString("4. close"));
 			
 			//JSON SERVICE????
 			
