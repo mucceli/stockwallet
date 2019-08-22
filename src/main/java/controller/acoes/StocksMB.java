@@ -20,13 +20,10 @@ public class StocksMB {
 	
 	public ArrayList<Stock> stockList;
 	
-	@Inject
-	private FacesContextUtil facesContextUtil;
-	
 	public void init(ComponentSystemEvent event) {
 		
 		//Show message after action in CRUD.
-		if(StockWalletConstants.CALLBACK_SUCCESS.equals(facesContextUtil.getExternalContext().getSessionMap().get(StockWalletConstants.CALLBACK))) {
+		if(StockWalletConstants.CALLBACK_SUCCESS.equals(FacesContextUtil.getInstance().getExternalContext().getSessionMap().get(StockWalletConstants.CALLBACK))) {
 			FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_INFO, null, "Stock saved with success!");
 			FacesContext.getCurrentInstance().addMessage("message", facesMessage);
 		}
