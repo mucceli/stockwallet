@@ -28,7 +28,7 @@ public class Analysis {
 	
 	@Column(name = "ANALYSIS_DATE")
 	@Temporal(TemporalType.DATE)
-	private Date dateAnalisys; 
+	private Date dateAnalysis; 
 	
 	@Column(name = "NOTE")
 	private String note;
@@ -53,12 +53,12 @@ public class Analysis {
 		this.analisysId = analisysId;
 	}
 
-	public Date getDateAnalisys() {
-		return dateAnalisys;
+	public Date getDateAnalysis() {
+		return dateAnalysis;
 	}
 
-	public void setDateAnalisys(Date dateAnalisys) {
-		this.dateAnalisys = dateAnalisys;
+	public void setDateAnalysis(Date dateAnalysis) {
+		this.dateAnalysis = dateAnalysis;
 	}
 
 	public String getNote() {

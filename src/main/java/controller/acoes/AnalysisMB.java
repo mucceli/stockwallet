@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import dao.AnalisysDAO;
+import dao.AnalysisDAO;
 import model.Analysis;
 
 @ManagedBean(name="analysisMB")
@@ -17,7 +17,7 @@ public class AnalysisMB {
 	
 	@PostConstruct
 	public void init() {
-		analysisList = new AnalisysDAO().findAll();
+		analysisList = new AnalysisDAO().findAll();
 	}
 
 	public List<Analysis> getAnalysisList() {

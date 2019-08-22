@@ -5,7 +5,7 @@ import java.util.List;
 import model.Analysis;
 import util.AbstractDao;
 
-public class AnalisysDAO extends AbstractDao {
+public class AnalysisDAO extends AbstractDao {
 
 	public List<Analysis>  findAll() {
 		return getEntityManagerInstance().createNamedQuery("Analysis.findAll",Analysis.class).getResultList();

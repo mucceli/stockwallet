@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import dao.AnalisysDAO;
+import dao.AnalysisDAO;
 import dao.AnalisysStatusDAO;
 import dao.StocksDAO;
 import model.Analysis;
@@ -37,8 +37,8 @@ public class CrudAnalisysMB {
 		//FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "PrimeFaces Rocks."));
 		entity.setStock(stockSelected);
 		entity.setStatus(analisysStatusSelected);
-		entity.setDateAnalisys(new Date());
-		new AnalisysDAO().save(entity);
+		entity.setDateAnalysis(new Date());
+		new AnalysisDAO().save(entity);
 		return "analisys";
 	}
 

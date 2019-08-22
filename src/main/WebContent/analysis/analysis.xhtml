@@ -12,15 +12,15 @@
 		<b:row style="height:40px;"/>
 		<b:messages id="messages" globalOnly="true"/>
 		<b:row style="height:40px;"/>
+		<h2>TITULO</h2>
 		  <div class="notification">
 			<b:dataTable value="#{analysisMB.analysisList}" var="analysis" searching="false" info="false">
-			    <b:dataTableColumn value="#{analysis.stock.name}" order="asc"/>
+			    <b:dataTableColumn value="#{analysis.stock.name}" order="asc" label="Stock Analysed"/>
 			    <b:dataTableColumn label="Analysis Date" dataType="date">
-				     <h:outputText value="#{analysis.dateAnalisys}">
+				     <h:outputText value="#{analysis.dateAnalysis}">
 				          <f:convertDateTime pattern="dd/MM/yyyy" />
 				     </h:outputText>	    				
 				</b:dataTableColumn>
-			    <b:dataTableColumn value="#{analysis.note}" order="asc"/>
 			    <b:dataTableColumn value="#{analysis.status.name}" order="asc" label="Status">
 			    	 <span style="margin-left: 3px;">
 			    	 	<b:label text="UP" severity="success" rendered="false"/>
@@ -28,10 +28,11 @@
 			    	 	<b:label text="BY-SIDE" rendered="true"/>
 			    	 </span>
 			    </b:dataTableColumn>
-			    <b:dataTableColumn label="Alert Date" data-type="date">
-			    	 <h:outputText value="#{analysis.alertDate}">
-			    		<f:convertDateTime pattern="dd/MM/yyyy" />
-			    	 </h:outputText>
+			     <b:dataTableColumn label="" >
+			     	<div style="margin-left: 20%;">
+				    	<b:button look="primary" icon="glyphicon-search" tooltip="Details" onclick="$('.modalPseudoClass').modal()" value="" style="display: in-line;margin-right: 10px;"/>
+				    	<b:button look="primary" icon="glyphicon-trash" tooltip="Delete" value="" />
+			    	</div>
 			    </b:dataTableColumn>
 			</b:dataTable>
 			<b:panelGrid columns="6" size="sm" >
@@ -39,6 +40,15 @@
 			 </b:panelGrid>
 		  </div>
 		  <b:row style="height:40px;"/>
+		  
+		  <b:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
+			  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+			  <f:facet name="footer">
+			    <b:button value="Close" dismiss="modal" />
+			    <b:button value="Ok" look="primary" dismiss="modal" />
+			  </f:facet>
+			</b:modal>
 </ui:define>
 
 </ui:composition>

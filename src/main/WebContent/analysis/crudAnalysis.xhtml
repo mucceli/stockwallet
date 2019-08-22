@@ -10,14 +10,17 @@
 
 	<ui:define name="content">
 		<b:row style="height:40px;"/>
-		<b:messages id="messages" globalOnly="true"/>
+		<b:messages id="messages" showDetail="true" closable="true"/>
 		<b:row>
-			  <b:selectOneMenu value="#{crudAnalisysMB.stockSelected}" medium-screen="6" required="true" label="Select the stock:">
+			  <b:selectOneMenu id="stockItem" value="#{crudAnalisysMB.stockSelected}" medium-screen="6" required="true" label="Stock:">
+	            <f:selectItem itemLabel="Select the stock ..." value=""/>
 	            <f:selectItems value="#{crudAnalisysMB.stockList}" var="stock" itemValue="#{stock}" itemLabel="#{stock.name}" />
 		    </b:selectOneMenu>
+		    <b:message for="stockItem"></b:message>
 		 </b:row>
 		 <b:row>
-			  <b:selectOneMenu value="#{crudAnalisysMB.analisysStatusSelected}" medium-screen="6" required="true" label="Select the status :">
+			  <b:selectOneMenu value="#{crudAnalisysMB.analisysStatusSelected}" medium-screen="6" required="true" label="Status :">
+	            <f:selectItem itemLabel="Select the status ..."/>
 	            <f:selectItems value="#{crudAnalisysMB.analisysStatusList}" var="status" itemValue="#{status}" itemLabel="#{status.name}" />
 		    </b:selectOneMenu>
 		 </b:row>
@@ -25,7 +28,7 @@
     		<b:inputTextarea value="#{crudAnalisysMB.entity.note}" medium-screen="6" placeholder="Write your notes about the stock" label="Note :" />
     	</b:row>
     	<b:row>
-			<b:dateTimePicker value="#{crudAnalisysMB.entity.alertDate}" medium-screen="6" label="Alert date :" format="DD/MM/YYYY"/>
+			<b:datepicker value="#{crudAnalisysMB.entity.alertDate}" medium-screen="6" label="Alert date :" format="DD/MM/YYYY" mode="icon-popup"/>
 		</b:row>
 		<b:row>
 			<b:column medium-screen="6">
