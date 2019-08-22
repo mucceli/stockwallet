@@ -10,9 +10,12 @@
     <h:head>
         <title>Sign Up</title>
         <h:outputStylesheet name="css/main.css" position="last"></h:outputStylesheet>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <meta name="google-signin-client_id" content="66066858461-l58u6qsvlc3pi5bc2qooneh2dsupkl03.apps.googleusercontent.com"/>        
     </h:head>
     <h:body>
     	<h:form id="signInForm" style="width:400px;margin-left:200px;">
+    	
     		<b:row style="height:40px;"/>
 		<b:messages id="messages" globalOnly="true"/>
 		<b:row>
@@ -42,6 +45,7 @@
 		 </b:row>
 		<div style="margin-top:10px;">
 		    <b:commandButton value="Sign In" look="primary" action="#{signInMB.saveEntity}" style="width:100%;" update="messages"/>
+		    <div class="g-signin2" data-onsuccess="onSignIn" style="width: 100%"></div>
 		</div>
     	</h:form>
     </h:body>
