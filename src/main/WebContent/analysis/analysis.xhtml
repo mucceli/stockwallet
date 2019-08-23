@@ -11,8 +11,7 @@
 	<ui:define name="content">
 		<b:row style="height:40px;"/>
 		<b:messages id="messages" globalOnly="true"/>
-		<b:row style="height:40px;"/>
-		<h2>TITULO</h2>
+		<h2><h:outputLabel value="#{label.titleUCAnalisys}"></h:outputLabel></h2>
 		  <div class="notification">
 			<b:dataTable value="#{analysisMB.analysisList}" var="analysis" searching="false" info="false">
 			    <b:dataTableColumn value="#{analysis.stock.name}" order="asc" label="Stock Analysed"/>

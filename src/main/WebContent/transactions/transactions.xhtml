@@ -10,9 +10,10 @@
 
 <ui:define name="content">
 		 <b:row style="height:40px;"/>
+		 <h2><h:outputLabel value="#{label.titleUCTransactions}"></h:outputLabel></h2>
 		  <div class="notification">
-						<b:panelGrid columns="12" size="sm" >
-			    <b:commandButton value="New Transaction" action="crudStocks.xhtml" update="@none" look="primary" />
+				<b:panelGrid columns="12" size="sm" >
+			    	<b:commandButton value="New Transaction" action="crudStocks.xhtml" update="@none" look="primary" />
 			  </b:panelGrid>
 		  </div>
 </ui:define>

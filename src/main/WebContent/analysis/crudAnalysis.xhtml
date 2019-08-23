@@ -11,6 +11,7 @@
 	<ui:define name="content">
 		<b:row style="height:40px;"/>
 		<b:messages id="messages" showDetail="true" closable="true"/>
+		<h2><h:outputLabel value="#{label.titleUCAnalisys}"></h:outputLabel></h2>
 		<b:row>
 			  <b:selectOneMenu id="stockItem" value="#{crudAnalisysMB.stockSelected}" medium-screen="6" required="true" label="Stock:">
 	            <f:selectItem itemLabel="Select the stock ..." value=""/>
@@ -33,7 +34,7 @@
 		<b:row>
 			<b:column medium-screen="6">
 		    <b:commandButton value="Save" look="primary" action="#{crudAnalisysMB.saveEntity}" style="width:80px;" update="messages"/>
-		    <b:commandButton value="Cancel" style="width:80px;margin-left:20px;"/>
+		    <b:commandButton value="Cancel" style="width:80px;margin-left:20px;" action="/analysis/analysis.xhtml" immediate="true"/>
 		    </b:column>
 		</b:row>
 </ui:define>
